@@ -1,8 +1,10 @@
 # HOW TO RUN THIS SUBMISSION
 
 ### Prerequisite
-- JDK 8 must be install on your machine see https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
+- Install JDK 8, see https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
 	>java -version
+- Install cURL, see https://www.cyberciti.biz/faq/how-to-install-curl-command-on-a-ubuntu-linux/
+	>curl --version
 - request (input): Json format
 	{
 	  "Shift": <<number>>,

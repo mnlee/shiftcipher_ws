@@ -8,7 +8,10 @@
 	  "Shift": <<number>>,
 	  "Message": "<<string>>"
 	}
-	- Note that the input request must be of a valid Json format.  If the format is not valid, the system will return a 400 code. 
+	- Note that the input request must be of a valid Json format.  If the format is not valid, the system will return a 4XX code. 
+	- Download https://github.com/mnlee/shiftcipher_ws
+		- extract the download 
+		- change the directory to shiftcipher/target
 
 	
 ### Testing environment/Outcome
@@ -23,4 +26,6 @@ or
 java -jar target/shiftcipher-0.0.1-SNAPSHOT.jar
 
 ### Test Application
-	curl -d '{"Shift":5, "Message":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:2345/api/encode
+curl -d '{"Shift":5, "Message":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:23456/api/encode -s -w "\n HTTP return code: %{http_code}\n"
+
+curl -d '{"Shift":-5, "Message":""}' -H "Content-Type: application/json" -X POST http://localhost:23456/api/encode -s -w "\n HTTP return code: %{http_code}\n"
